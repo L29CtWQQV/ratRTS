@@ -14,6 +14,8 @@ var movable = null
  
 func _ready():
 	mark.visible = false
+	for c in p_units.get_children():
+		c.family = 1
 
 func _process(delta):
 	if state == SELECT_PLAYER:
@@ -53,7 +55,7 @@ func _process(delta):
 						r.walk.set_target(d["position"],p_units)
 						r.action.stop_action()
 						r.action = r.walk
-						r.action.follow_action = r.idle
+						r.walk.follow_action = r.idle
 					state = SELECT_PLAYER
 					for p in selected_p_units:
 						p.marked = false
@@ -72,8 +74,8 @@ func _process(delta):
 					r.walk.set_target(movable.global_position,p_units)
 					r.action.stop_action()
 					r.action = r.walk
-					r.action.move_object = movable
-					r.action.follow_action = r.idle
+					r.walk.move_object = movable
+					r.walk.follow_action = r.idle
 				state = SELECT_PLAYER
 				for p in selected_p_units:
 					p.marked = false

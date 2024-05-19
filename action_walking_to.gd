@@ -20,11 +20,11 @@ func set_target(p:Vector3,list:Node):
 		return false
 
 	var overlap = true
-	var s = .5
+	var s = 1.5
 	var cnt = 0
 	while overlap:
 		cnt += 1
-		if cnt > 8:
+		if cnt > 12:
 		#	print("to crowded")
 			return true #give up
 		p=op + Vector3(randf_range(-s,s),0.0,randf_range(-s,s))
@@ -36,6 +36,8 @@ func set_target(p:Vector3,list:Node):
 				overlap = true
 		if !navag.is_target_reachable():
 			overlap = true
+		#if move_object != null and (move_object.global_position - rat.global_position).length()>1.5:
+		#	overlap = true
 		s+= .4
 	return true
 
@@ -46,17 +48,20 @@ func stop_action():
 			started_moving = false
 		move_object = null
 
-func act(rat: CharacterBody3D,delta):
+func act(rat: Node3D,delta):
 	if fighting:
 		last_attack += delta
 		if last_attack > 1.8:
 			if (move_object.global_position-rat.global_position).length()<.5:
 				move_object.kill()
 				rat.action = follow_action
+	if rat.allow_movement:
+		rat.global_position  = rat.global_position.move_toward(navag.get_next_path_position(),delta*rat.speed)
+	else:
+			#rat.global_position  +=rat.global_position - rat.global_position.move_toward(navag.get_next_path_position(),delta*rat.speed)
+		var s = .3
+		rat.global_position += Vector3(randf_range(-s,s),0,randf_range(-s,s))
 			
-	rat.global_position  = rat.global_position.move_toward(navag.get_next_path_position(),delta*rat.speed)
-	
-	
 	if rat.global_position == navag.get_final_position():
 
 		if move_object == null or move_object.finished:

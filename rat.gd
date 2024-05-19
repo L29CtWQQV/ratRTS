@@ -1,14 +1,15 @@
-extends CharacterBody3D
+extends Node3D
 
 @onready var idle = $action_idle;
 @onready var walk = $action_walking_to;
 @onready var target = $"./gl/target"
-var speed = 16
+var speed = 9
 var marked = false
 var t = 0
 var action = idle
 var death = false
-
+var allow_movement = true
+var family = 0
 func _ready():
 	action = idle
 

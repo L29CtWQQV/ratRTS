@@ -1,25 +1,26 @@
-[gd_scene load_steps=8 format=3 uid="uid://dp0jjeidhxuc5"]
+[gd_scene load_steps=6 format=3 uid="uid://dp0jjeidhxuc5"]
 
 [ext_resource type="Script" path="res://rat.gd" id="1_qi8vv"]
 [ext_resource type="Script" path="res://action_idle.gd" id="2_nrhka"]
 [ext_resource type="Script" path="res://action_walking_to.gd" id="3_x3oe2"]
 
+[sub_resource type="SphereShape3D" id="SphereShape3D_g7g2a"]
+radius = 0.294004
+
 [sub_resource type="CapsuleMesh" id="CapsuleMesh_bxtr0"]
 
-[sub_resource type="CapsuleShape3D" id="CapsuleShape3D_gusmx"]
-radius = 0.248155
-height = 0.49631
-
-[sub_resource type="SphereMesh" id="SphereMesh_ob7ij"]
-
-[sub_resource type="SphereShape3D" id="SphereShape3D_g7g2a"]
-
-[node name="rat" type="CharacterBody3D"]
-wall_min_slide_angle = 0.66497
+[node name="rat" type="Node3D"]
 script = ExtResource("1_qi8vv")
+
+[node name="area" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="area"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162999, 0)
+shape = SubResource("SphereShape3D_g7g2a")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
 transform = Transform3D(-0.0101459, 0.262427, 0, -0.339254, -0.00784824, 0, 0, 0, 0.54515, 0, 0.145923, 0)
+cast_shadow = 3
 mesh = SubResource("CapsuleMesh_bxtr0")
 skeleton = NodePath("")
 
@@ -31,19 +32,7 @@ script = ExtResource("3_x3oe2")
 
 [node name="NavigationAgent3D" type="NavigationAgent3D" parent="."]
 avoidance_enabled = true
-radius = 0.2
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.214873, 0)
-shape = SubResource("CapsuleShape3D_gusmx")
 
 [node name="gl" type="Node" parent="."]
 
-[node name="target" type="Area3D" parent="gl"]
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="gl/target"]
-visible = false
-mesh = SubResource("SphereMesh_ob7ij")
-
-[node name="CollisionShape3D" type="CollisionShape3D" parent="gl/target"]
-shape = SubResource("SphereShape3D_g7g2a")
+[node name="target" type="Node3D" parent="gl"]

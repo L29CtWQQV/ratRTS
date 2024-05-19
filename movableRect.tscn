@@ -1,0 +1,36 @@
+[gd_scene load_steps=5 format=3 uid="uid://c0ihnisl7r417"]
+
+[ext_resource type="Script" path="res://movable.gd" id="1_ysva8"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_44sf8"]
+size = Vector3(0.285156, 1, 2.54102)
+
+[sub_resource type="BoxMesh" id="BoxMesh_h062n"]
+
+[sub_resource type="BoxShape3D" id="BoxShape3D_rox4n"]
+size = Vector3(0.371279, 0.176674, 0.510887)
+
+[node name="movable" type="CharacterBody3D"]
+script = ExtResource("1_ysva8")
+
+[node name="CollisionShape3D3" type="CollisionShape3D" parent="."]
+transform = Transform3D(0.718114, -0.015303, -0.695757, -0.695925, -0.0157909, -0.71794, 0, 0.999758, -0.0219894, 0.114369, 0.538056, 0.107111)
+shape = SubResource("BoxShape3D_44sf8")
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(0.175568, 1.33492, 0, -0.151519, 1.54679, 0, 0, 0, 0.797608, 0.137174, 0.55464, 0.152681)
+mesh = SubResource("BoxMesh_h062n")
+
+[node name="Area3D" type="Area3D" parent="."]
+
+[node name="CollisionShape3D4" type="CollisionShape3D" parent="Area3D"]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40224, 0.122654, 0.133938)
+shape = SubResource("BoxShape3D_rox4n")
+
+[node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.460902)
+start_position = Vector3(0.785292, 1.6331, -0.0949133)
+end_position = Vector3(-0.83209, -0.0456662, 1.3438)
+
+[connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
+[connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

@@ -1,6 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://b7bx36o0xiwxo"]
+[gd_scene load_steps=6 format=3 uid="uid://b7bx36o0xiwxo"]
+
+[ext_resource type="Shader" path="res://world_tile.gdshader" id="1_adq1o"]
+[ext_resource type="Texture2D" uid="uid://bhdsq258b02wy" path="res://screen5.png" id="2_r2lop"]
+
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_hjilc"]
+render_priority = 0
+shader = ExtResource("1_adq1o")
+shader_parameter/background = ExtResource("2_r2lop")
 
 [sub_resource type="BoxMesh" id="BoxMesh_lne3w"]
+material = SubResource("ShaderMaterial_hjilc")
 
 [sub_resource type="BoxShape3D" id="BoxShape3D_f7yk8"]
 size = Vector3(7.71576, 2.65625, 4.33624)
