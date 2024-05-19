@@ -56,7 +56,7 @@ navigation_mesh = SubResource("NavigationMesh_eer44")
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.444848, 20.5073, -21.0277)
 
 [node name="movable14" parent="NavigationRegion3D/objects" instance=ExtResource("6_cu4dn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31846, 20.5073, -22.0801)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.31846, 20.5073, -21.0967)
 
 [node name="movable15" parent="NavigationRegion3D/objects" instance=ExtResource("6_cu4dn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 32.0722, 15.4811, -18.9474)
@@ -77,7 +77,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 15.1311, 17.1276, -11.05)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.71826, 17.1276, -17.5791)
 
 [node name="movable9" parent="NavigationRegion3D/objects" instance=ExtResource("6_cu4dn")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.42724, 20.2663, -18.1999)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.42724, 20.2663, -16.7582)
 
 [node name="movable10" parent="NavigationRegion3D/objects" instance=ExtResource("6_cu4dn")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -18.0633, 17.1276, -12.3445)
@@ -412,6 +412,7 @@ mesh = SubResource("QuadMesh_p4yg3")
 [node name="enemy_units" type="Node3D" parent="."]
 
 [node name="1" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat116" parent="enemy_units/1" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08445, 1.5347, 1.02979)
@@ -447,6 +448,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.810906, 1.5347, -0.104954)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56178, 1.5347, -0.104954)
 
 [node name="2" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat107" parent="enemy_units/2" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.07848, 1.5347, 0)
@@ -476,6 +478,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.48896, 1.5347, 0.649779)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71176, 1.5347, 1.02979)
 
 [node name="3" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat98" parent="enemy_units/3" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69564, 1.5347, 0.649779)
@@ -505,6 +508,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10015, 1.5347, -0.104954)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91147, 1.5347, 0.177047)
 
 [node name="4" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat87" parent="enemy_units/4" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376465, 1.5347, 0.48393)
@@ -540,6 +544,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27313, 1.5347, 1.20683)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89913, 1.5347, 1.51372)
 
 [node name="5" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat78" parent="enemy_units/5" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72237, 1.5347, 1.02979)
@@ -569,6 +574,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24953, 1.5347, 0.177047)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416546, 1.5347, 0)
 
 [node name="6" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat71" parent="enemy_units/6" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.626, 1.5347, 1.51372)
@@ -592,6 +598,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14866, 1.5347, 1.51372)
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.94517, 1.5347, 0.649779)
 
 [node name="7" type="Node3D" parent="enemy_units"]
+transform = Transform3D(0.999826, 0, -0.0186739, 0, 1, 0, 0.0186739, 0, 0.999826, -5.49622, 3.01443, -2.17053)
 
 [node name="rat64" parent="enemy_units/7" instance=ExtResource("2_be87n")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5347, 0.177047)
@@ -617,193 +624,193 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5347, 1.20683)
 [node name="player_units" type="Node3D" parent="."]
 
 [node name="rat" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5347, 0.177047)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.0407, 1.5347, 5.09042)
 
 [node name="rat2" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.832989, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.6826, 1.5347, 5.65006)
 
 [node name="rat3" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.626, 1.5347, 0.48393)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.7721, 1.5347, 6.57475)
 
 [node name="rat4" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42251, 1.5347, -0.380008)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.9412, 1.5347, 6.69263)
 
 [node name="rat5" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19971, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.1042, 1.5347, 7.54227)
 
 [node name="rat6" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17298, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.4777, 1.5347, 4.04627)
 
 [node name="rat7" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.2174, 1.5347, 5.70897)
 
 [node name="rat8" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.626, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.9487, 1.5347, 7.1933)
 
 [node name="rat9" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.42251, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.1179, 1.5347, 7.31118)
 
 [node name="rat10" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.19971, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.2809, 1.5347, 8.16082)
 
 [node name="rat11" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.17298, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.6544, 1.5347, 4.66482)
 
 [node name="rat12" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52266, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.5347, 1.5347, 10.1244)
 
 [node name="rat13" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14866, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 20.266, 1.5347, 11.6087)
 
 [node name="rat14" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.94517, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 21.4351, 1.5347, 11.7266)
 
 [node name="rat15" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72237, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 21.5981, 1.5347, 12.5762)
 
 [node name="rat16" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34968, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.9716, 1.5347, 9.08022)
 
 [node name="rat17" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.52266, 1.5347, 0.0720928)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 20.4419, 1.5347, 9.44278)
 
 [node name="rat18" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.14866, 1.5347, 0.378976)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 21.1732, 1.5347, 10.9271)
 
 [node name="rat19" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.94517, 1.5347, -0.484962)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 22.3424, 1.5347, 11.045)
 
 [node name="rat20" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 8.72237, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 22.5054, 1.5347, 11.8946)
 
 [node name="rat21" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.34968, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.8789, 1.5347, 8.39863)
 
 [node name="rat22" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24953, 1.5347, 0.177047)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.2902, 1.5347, 4.09141)
 
 [node name="rat23" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.416546, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.9321, 1.5347, 4.65105)
 
 [node name="rat24" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376465, 1.5347, 0.48393)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.0215, 1.5347, 5.57574)
 
 [node name="rat25" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17298, 1.5347, -0.380008)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.1907, 1.5347, 5.69363)
 
 [node name="rat26" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95018, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.3537, 1.5347, 6.54326)
 
 [node name="rat27" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42251, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.7272, 1.5347, 3.04726)
 
 [node name="rat28" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.24953, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.4669, 1.5347, 4.70996)
 
 [node name="rat29" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.376465, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.1982, 1.5347, 6.19429)
 
 [node name="rat30" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.17298, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.3674, 1.5347, 6.31218)
 
 [node name="rat31" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.95018, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.5304, 1.5347, 7.16181)
 
 [node name="rat32" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.42251, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 14.9039, 1.5347, 3.66581)
 
 [node name="rat33" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27313, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.7841, 1.5347, 9.12536)
 
 [node name="rat34" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89913, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.5154, 1.5347, 10.6097)
 
 [node name="rat35" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69564, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 20.6846, 1.5347, 10.7276)
 
 [node name="rat36" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.47284, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 20.8476, 1.5347, 11.5772)
 
 [node name="rat37" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10015, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 18.2211, 1.5347, 8.08122)
 
 [node name="rat38" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 4.27313, 1.5347, 0.0720928)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.6913, 1.5347, 8.44378)
 
 [node name="rat39" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.89913, 1.5347, 0.378976)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 20.4227, 1.5347, 9.9281)
 
 [node name="rat40" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.69564, 1.5347, -0.484962)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 21.5918, 1.5347, 10.046)
 
 [node name="rat41" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 7.47284, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 21.7548, 1.5347, 10.8956)
 
 [node name="rat42" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 3.10015, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 19.1283, 1.5347, 7.39963)
 
 [node name="rat43" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91147, 1.5347, 0.177047)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 12.2887, 1.5347, -1.23485)
 
 [node name="rat44" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.07848, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 12.9306, 1.5347, -0.675214)
 
 [node name="rat45" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28547, 1.5347, 0.48393)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 13.02, 1.5347, 0.249479)
 
 [node name="rat46" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.48896, 1.5347, -0.380008)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 14.1891, 1.5347, 0.367363)
 
 [node name="rat47" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71176, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 14.3521, 1.5347, 1.21699)
 
 [node name="rat48" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08445, 1.5347, 0)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 11.7257, 1.5347, -2.279)
 
 [node name="rat49" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -7.91147, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 11.4653, 1.5347, -0.616303)
 
 [node name="rat50" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -6.28547, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 12.1967, 1.5347, 0.86803)
 
 [node name="rat51" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.48896, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 13.3658, 1.5347, 0.985912)
 
 [node name="rat52" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.71176, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 13.5288, 1.5347, 1.83555)
 
 [node name="rat53" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -9.08445, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 10.9023, 1.5347, -1.66045)
 
 [node name="rat54" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3888, 1.5347, 1.20683)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 14.7826, 1.5347, 3.79911)
 
 [node name="rat55" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.762804, 1.5347, 1.51372)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.5139, 1.5347, 5.28344)
 
 [node name="rat56" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0337057, 1.5347, 0.649779)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.683, 1.5347, 5.40132)
 
 [node name="rat57" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.810906, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.846, 1.5347, 6.25095)
 
 [node name="rat58" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56178, 1.5347, 1.02979)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 14.2196, 1.5347, 2.75496)
 
 [node name="rat59" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.3888, 1.5347, 0.0720928)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.6898, 1.5347, 3.11752)
 
 [node name="rat60" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.762804, 1.5347, 0.378976)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 16.4211, 1.5347, 4.60184)
 
 [node name="rat61" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.0337057, 1.5347, -0.484962)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.5903, 1.5347, 4.71973)
 
 [node name="rat62" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.810906, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 17.7533, 1.5347, 5.56936)
 
 [node name="rat63" parent="player_units" instance=ExtResource("2_be87n")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.56178, 1.5347, -0.104954)
+transform = Transform3D(0.600657, 0, -0.799506, 0, 1, 0, 0.799506, 0, 0.600657, 15.1268, 1.5347, 2.07337)
 
 [node name="OmniLight3D" type="OmniLight3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -13.3566, 4.64871, 4.48188)

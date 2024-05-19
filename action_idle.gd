@@ -4,7 +4,7 @@ func _ready():
 	pass 
 	
 func act(rat: Node3D,delta):
-	pass
+	rat.look_at(rat.global_position+Vector3.LEFT,Vector3.UP)
 
 func stop_action():
 	pass

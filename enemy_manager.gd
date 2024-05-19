@@ -14,8 +14,9 @@ func _process(delta):
 		var p = points.get_child(randi_range(0,points.get_child_count()-1))
 		var g = e_units.get_child(randi_range(0,e_units.get_child_count()-1))
 		for e in g.get_children():
-			e.walk.set_target(p.global_position,g)
-			e.action.stop_action()
-			e.action = e.walk
-			e.walk.follow_action = e.idle
+			if !e.death:
+				e.walk.set_target(p.global_position,g.get_children())
+				e.action.stop_action()
+				e.action = e.walk
+				e.walk.follow_action = e.idle
 		time = randf_range(0,4)

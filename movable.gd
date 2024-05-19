@@ -57,7 +57,6 @@ func _on_area_3d_area_entered(area):
 		if dangerous:
 			r.kill()
 		else:
-			print("overlapppp")
 			r.allow_movement = false
 			
 		

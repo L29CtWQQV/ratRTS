@@ -18,19 +18,19 @@ transform = Transform3D(0.718114, -0.015303, -0.695757, -0.695925, -0.0157909, -
 shape = SubResource("BoxShape3D_44sf8")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(0.175568, 1.33492, 0, -0.151519, 1.54679, 0, 0, 0, 0.797608, 0.137174, 0.55464, 0.152681)
+transform = Transform3D(0.29109, 2.09296, 0, -0.251217, 2.42515, 0, 0, 0, 0.797608, 0.137174, 0.55464, 0.152681)
 mesh = SubResource("BoxMesh_h062n")
 
 [node name="Area3D" type="Area3D" parent="."]
 
 [node name="CollisionShape3D4" type="CollisionShape3D" parent="Area3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.40224, 0.122654, 0.133938)
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.487655, -1.49877, 0.133938)
 shape = SubResource("BoxShape3D_rox4n")
 
 [node name="NavigationLink3D2" type="NavigationLink3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0, -0.460902)
-start_position = Vector3(0.785292, 1.6331, -0.0949133)
-end_position = Vector3(-0.83209, -0.0456662, 1.3438)
+start_position = Vector3(1.61798, 2.8881, -0.833539)
+end_position = Vector3(-0.792377, -0.486387, 1.35579)
 
 [connection signal="area_entered" from="Area3D" to="." method="_on_area_3d_area_entered"]
 [connection signal="area_exited" from="Area3D" to="." method="_on_area_3d_area_exited"]

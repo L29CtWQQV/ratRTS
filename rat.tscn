@@ -1,28 +1,129 @@
-[gd_scene load_steps=6 format=3 uid="uid://dp0jjeidhxuc5"]
+[gd_scene load_steps=21 format=3 uid="uid://dp0jjeidhxuc5"]
 
 [ext_resource type="Script" path="res://rat.gd" id="1_qi8vv"]
 [ext_resource type="Script" path="res://action_idle.gd" id="2_nrhka"]
 [ext_resource type="Script" path="res://action_walking_to.gd" id="3_x3oe2"]
+[ext_resource type="Texture2D" uid="uid://cvl54pguoey8y" path="res://ratanim.png" id="4_847oi"]
+[ext_resource type="Texture2D" uid="uid://bkypj0j2oimcm" path="res://ratanimwhite.png" id="4_bkqaq"]
+
+[sub_resource type="SphereShape3D" id="SphereShape3D_pqnpt"]
+radius = 0.310144
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_g7g2a"]
-radius = 0.294004
+radius = 1.59396
 
-[sub_resource type="CapsuleMesh" id="CapsuleMesh_bxtr0"]
+[sub_resource type="AtlasTexture" id="AtlasTexture_kvafc"]
+atlas = ExtResource("4_bkqaq")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_n28hb"]
+atlas = ExtResource("4_bkqaq")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_f31gw"]
+atlas = ExtResource("4_bkqaq")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_3h11h"]
+atlas = ExtResource("4_bkqaq")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_r53xv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_kvafc")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_n28hb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_f31gw")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_3h11h")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_xm1ei"]
+atlas = ExtResource("4_847oi")
+region = Rect2(0, 0, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_oxjk5"]
+atlas = ExtResource("4_847oi")
+region = Rect2(0, 32, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_t5kcp"]
+atlas = ExtResource("4_847oi")
+region = Rect2(0, 64, 64, 32)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hivjl"]
+atlas = ExtResource("4_847oi")
+region = Rect2(0, 96, 64, 32)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_jna6u"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_xm1ei")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_oxjk5")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_t5kcp")
+}],
+"loop": true,
+"name": &"default",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hivjl")
+}],
+"loop": true,
+"name": &"die",
+"speed": 5.0
+}]
+
+[sub_resource type="ParticleProcessMaterial" id="ParticleProcessMaterial_py2s7"]
+direction = Vector3(0, 1, 0)
+spread = 34.715
+initial_velocity_max = 26.87
+gravity = Vector3(0, -20, 0)
+
+[sub_resource type="StandardMaterial3D" id="StandardMaterial3D_ktynr"]
+albedo_color = Color(0.380392, 0.054902, 0.0862745, 1)
+roughness = 0.0
+
+[sub_resource type="SphereMesh" id="SphereMesh_u4jla"]
+material = SubResource("StandardMaterial3D_ktynr")
+radius = 0.2
+height = 0.4
 
 [node name="rat" type="Node3D"]
+transform = Transform3D(-0.0373415, 0, -0.999303, 0, 1, 0, 0.999303, 0, -0.0373415, 0, 0, 0)
 script = ExtResource("1_qi8vv")
 
 [node name="area" type="Area3D" parent="."]
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="area"]
+transform = Transform3D(1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0.191186, 0)
+shape = SubResource("SphereShape3D_pqnpt")
+
+[node name="search" type="Area3D" parent="."]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="search"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162999, 0)
 shape = SubResource("SphereShape3D_g7g2a")
-
-[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
-transform = Transform3D(-0.0101459, 0.262427, 0, -0.339254, -0.00784824, 0, 0, 0, 0.54515, 0, 0.145923, 0)
-cast_shadow = 3
-mesh = SubResource("CapsuleMesh_bxtr0")
-skeleton = NodePath("")
 
 [node name="action_idle" type="Node" parent="."]
 script = ExtResource("2_nrhka")
@@ -36,3 +137,27 @@ avoidance_enabled = true
 [node name="gl" type="Node" parent="."]
 
 [node name="target" type="Node3D" parent="gl"]
+
+[node name="sp1" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.0115515, 0, 0.999948, 0, 1.28018, 0, -1.13132, 0, 0.01021, 0.00224874, 0.056022, -0.00277197)
+visible = false
+sprite_frames = SubResource("SpriteFrames_r53xv")
+animation = &"die"
+
+[node name="sp2" type="AnimatedSprite3D" parent="."]
+transform = Transform3D(0.0115981, 0, 0.999948, 0, 1.28494, 0, -1.13589, 0, 0.01021, 0.00224874, 0.0557163, -0.00277197)
+sprite_frames = SubResource("SpriteFrames_jna6u")
+animation = &"die"
+
+[node name="GPUParticles3D" type="GPUParticles3D" parent="."]
+transform = Transform3D(-0.00607823, 0, 0.150124, 0, 0.164685, 0, -0.162661, 0, -0.00560976, 0, 0, 0)
+emitting = false
+amount = 300
+lifetime = 0.42
+one_shot = true
+interpolate = false
+process_material = SubResource("ParticleProcessMaterial_py2s7")
+draw_pass_1 = SubResource("SphereMesh_u4jla")
+
+[connection signal="area_entered" from="search" to="." method="_on_search_area_entered"]
+[connection signal="area_exited" from="search" to="." method="_on_search_area_exited"]

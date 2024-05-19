@@ -3,7 +3,7 @@ uniform sampler2D background;
 
 void fragment() {
 	// simple single color albedo.
-	ALBEDO = texture(background,SCREEN_UV).rgb+.2;
+	ALBEDO = texture(background,SCREEN_UV).rgb;
 	// start with 0 alpha so we can add multiple light shadows together in light()
 	
 }
