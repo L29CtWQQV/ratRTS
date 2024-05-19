@@ -26,15 +26,15 @@ func set_target(p:Vector3,list:Node):
 	var cnt = 0
 	while overlap:
 		cnt += 1
-		if cnt > 4:
+		if cnt > 8:
 		#	print("to crowded")
-			return false
+			return true #give up
 		p=op + Vector3(randf_range(-s,s),0.0,randf_range(-s,s))
 		target.global_position=p
 		navag.target_position = p
 		overlap = false
 		for c in list.get_children() :
-			if ((c!= rat) and (target.global_position-c.target.global_position).length()<.4)or abs(navag.get_final_position().y-p.y)>.2:
+			if ((c!= rat) and (target.global_position-c.target.global_position).length()<.4):
 				overlap = true
 				#print(c,(target.global_position-c.target.global_position).length())
 		if !navag.is_target_reachable():
@@ -70,7 +70,6 @@ func act(rat: CharacterBody3D,delta):
 			if !fighting and !started_moving:
 				started_moving = true
 				move_object.add_mover()
-				print("addddddddddddddd")
 			set_target(move_object.global_position,o_rats)
 		
 	#rat.velocity = dir

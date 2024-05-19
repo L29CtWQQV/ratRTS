@@ -17,6 +17,7 @@ func is_in_2d_selection(cam: Camera3D,r:Rect2):
 	return r.has_point(p)
 
 func kill():
+	print("killledd")
 	if !death:
 		death
 		action.stop_action()

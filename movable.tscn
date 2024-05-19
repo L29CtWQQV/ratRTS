@@ -3,15 +3,17 @@
 [ext_resource type="Script" path="res://movable.gd" id="1_oxpn2"]
 
 [sub_resource type="SphereShape3D" id="SphereShape3D_78t0f"]
+radius = 1.10753
 
 [sub_resource type="SphereMesh" id="SphereMesh_bi3w1"]
 
 [node name="movable" type="CharacterBody3D"]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.54639, 4.4565, -2.95504)
 script = ExtResource("1_oxpn2")
 
 [node name="CollisionShape3D" type="CollisionShape3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.653904, 0)
 shape = SubResource("SphereShape3D_78t0f")
 
 [node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(2.52467, 0, 0, 0, 2.04318, 0, 0, 0, 2.78951, 0.137174, 0.55464, 0.152681)
 mesh = SubResource("SphereMesh_bi3w1")
