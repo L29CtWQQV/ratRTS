@@ -11,13 +11,10 @@ var drag_end: Vector2
 @export var p_units: Node
 @onready var mark = $mark_rect
 var movable = null 
-# Called when the node enters the scene tree for the first time.
+ 
 func _ready():
 	mark.visible = false
-	#	for c in p_units.get_children():
-	#	c.action = c.idle
 
-# Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	if state == SELECT_PLAYER:
 		if drag_start != Vector2.ZERO:
@@ -39,6 +36,7 @@ func _process(delta):
 			drag_start = Vector2.ZERO
 			mark.visible = false
 			state = CHOOSE_ACTION
+			
 	elif state == CHOOSE_ACTION:
 		if Input.is_action_just_pressed("mouse_left"):
 			var m_pos = get_viewport().get_mouse_position()
@@ -60,6 +58,7 @@ func _process(delta):
 					for p in selected_p_units:
 						p.marked = false
 					selected_p_units=[]
+					
 	elif state == AIM_MOVABLE:
 		if Input.is_action_just_pressed("mouse_left"):
 			var m_pos = get_viewport().get_mouse_position()

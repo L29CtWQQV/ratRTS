@@ -8,7 +8,7 @@ var marked = false
 var t = 0
 var action = idle
 var death = false
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	action = idle
 
@@ -22,7 +22,7 @@ func kill():
 		death
 		action.stop_action()
 		queue_free()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	t += delta
 	action.act(self,delta)

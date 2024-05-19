@@ -1,6 +1,4 @@
 extends Node
-
-
 @onready var navag = $"../NavigationAgent3D"
 @onready var target = $"../gl/target" 
 @onready var rat = $".."
@@ -10,7 +8,7 @@ var follow_action = null
 var last_attack = 0
 var started_moving = false
 var o_rats = []
-# Called when the node enters the scene tree for the first time.
+
 func _ready():
 	follow_action = rat.idle
 
@@ -36,7 +34,6 @@ func set_target(p:Vector3,list:Node):
 		for c in list.get_children() :
 			if ((c!= rat) and (target.global_position-c.target.global_position).length()<.4):
 				overlap = true
-				#print(c,(target.global_position-c.target.global_position).length())
 		if !navag.is_target_reachable():
 			overlap = true
 		s+= .4
@@ -57,7 +54,6 @@ func act(rat: CharacterBody3D,delta):
 				move_object.kill()
 				rat.action = follow_action
 			
-	#var dir = (navag.get_next_path_position()-rat.position).normalized()*rat.speed
 	rat.global_position  = rat.global_position.move_toward(navag.get_next_path_position(),delta*rat.speed)
 	
 	
@@ -71,10 +67,6 @@ func act(rat: CharacterBody3D,delta):
 				started_moving = true
 				move_object.add_mover()
 			set_target(move_object.global_position,o_rats)
-		
-	#rat.velocity = dir
-	#rat.velocity.y -= 100*delta
-	#rat.move_and_slide()
-# Called every frame. 'delta' is the elapsed time since the previous frame.
+
 func _process(delta):
 	pass
