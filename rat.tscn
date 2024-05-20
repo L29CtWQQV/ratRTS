@@ -119,9 +119,12 @@ script = ExtResource("1_qi8vv")
 transform = Transform3D(1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0.191186, 0)
 shape = SubResource("SphereShape3D_pqnpt")
 
-[node name="search" type="Area3D" parent="."]
+[node name="Node3D" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 3.72529e-09, 0, 1, 0, -3.72529e-09, 0, 1, 0, 0, 0)
 
-[node name="CollisionShape3D" type="CollisionShape3D" parent="search"]
+[node name="search" type="Area3D" parent="Node3D"]
+
+[node name="CollisionShape3D" type="CollisionShape3D" parent="Node3D/search"]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.162999, 0)
 shape = SubResource("SphereShape3D_g7g2a")
 
@@ -159,5 +162,5 @@ interpolate = false
 process_material = SubResource("ParticleProcessMaterial_py2s7")
 draw_pass_1 = SubResource("SphereMesh_u4jla")
 
-[connection signal="area_entered" from="search" to="." method="_on_search_area_entered"]
-[connection signal="area_exited" from="search" to="." method="_on_search_area_exited"]
+[connection signal="area_entered" from="Node3D/search" to="." method="_on_search_area_entered"]
+[connection signal="area_exited" from="Node3D/search" to="." method="_on_search_area_exited"]

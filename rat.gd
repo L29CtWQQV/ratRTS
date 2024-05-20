@@ -53,7 +53,7 @@ func _process(delta):
 		family_changed = false
 	t += delta
 	
-	if !death and close_enemys.size() != 0 and (action != walk or !walk.fighting):
+	if !death and action == idle and close_enemys.size() != 0:
 		if close_enemys[0].death:
 			close_enemys.remove_at(0)
 		else:
@@ -76,11 +76,11 @@ func _process(delta):
 
 
 func _on_search_area_entered(area):
-	var r =  area.get_parent()
+	var r =  area.get_parent().get_parent()
 	if r.has_method("kill") and r.family != family:
 		close_enemys.append(r)
 
 
 func _on_search_area_exited(area):
-	var r =  area.get_parent()
+	var r =  area.get_parent().get_parent()
 	close_enemys.erase(r)

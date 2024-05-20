@@ -55,10 +55,10 @@ func act(rat: Node3D,delta):
 			stop_action()
 		else:
 			last_attack += delta
-			if last_attack > 1.8:
+			if last_attack > 4:
 				if (move_object.global_position-rat.global_position).length()<.5:
 					move_object.kill()
-					last_attack = 0
+					last_attack = randf_range(0,3.3)
 					stop_action()
 					
 				

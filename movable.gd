@@ -34,7 +34,7 @@ func _process(delta):
 
 		move_and_slide()
 	else:
-		if abs(velocity.y) >5:
+		if abs(velocity.y) >20:
 			dangerous = true
 			#finished = true
 
